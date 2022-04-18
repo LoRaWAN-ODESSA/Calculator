@@ -10,7 +10,7 @@ public class Main {
             double num1 = firstNum.nextDouble();
 
             Scanner operator = new Scanner(System.in);
-            System.out.println("Enter operator:");
+            System.out.println("Enter operator (+, -, /, *):");
             String operator1 = operator.nextLine();
 
             Scanner secondNum = new Scanner(System.in);
@@ -33,6 +33,9 @@ public class Main {
                 case "*":
                     result = num1 * num2;
                     break;
+                default:
+                    System.out.println("Unknown operator");
+                    return;
             }
 
             if(operator1 != "/" && num2 != 0.0) {
